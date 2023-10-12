@@ -90,5 +90,22 @@ https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.tangle.tools&ref=blog.webb.too
 curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "author_rotateKeys", "params":[]}' http://localhost:9933
 ```
 
+* daha sonrası normal şeyler zaten beklemede gorunucez https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.tangle.tools&ref=blog.webb.tools#/staking bu rda belirli dönemde onaylandıktan sonra aktive geçicez suan validator limiti 20 yukseltilicektir.
+
+* yedek almayı unutmayınız. aşağıdaki yerdeki dosyaları yedekleyiniz taşımakta laızm olucak taşımak için normal kurun eşleşin sonra durdurup key dosyalarını değiştirip başlatın
+
+$HOME/.tangle/node-key
+$HOME/.tangle/data/chains/tangle-standalone-testnet/keystore/
+
+
+### Nodu silmek
+```
+systemctl stop tangle && \
+systemctl disable tangle && \
+rm /etc/systemd/system/tangle.service && \
+systemctl daemon-reload && \
+cd \
+rm -r .tangle
+```
 
 
