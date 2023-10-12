@@ -28,7 +28,7 @@ chmod 744 ~/.tangle/tangle-standalone.json
 ```
 
 ### Servis oluşturuyoruz
-Not: yourname=<name> kısmında <name> değiştiriyoruz adımızı yazıyoruz.
+Not: `yourname=<name>` kısmında `<name>` değiştiriyoruz adımızı yazıyoruz.
 ```
 yourname=<name>
 ```
@@ -73,19 +73,19 @@ journalctl -u tangle -f -o cat
 * herhangi bir polka cüzdanı işimizi görecektir.
 https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.tangle.tools&ref=blog.webb.tools#/accounts
 * adrese gidiyoruz ve cüzdan adresimizi kopyalıyoruz
-* faucetten testcoini talep edıyoruz https://faucet.tangle.tools/ twit bağlama gbi öncelikler var aynı amanda takip.  ağdan tangleyi seçiyoruz. 2 tip talep yontemi var biri pola diğeri mm adresi
+* faucetten `testcoini` talep edıyoruz https://faucet.tangle.tools/ twit bağlama gbi öncelikler var aynı amanda takip.  ağdan tangleyi seçiyoruz. 2 tip talep yontemi var biri pola diğeri mm adresi
 * daha sonra validator olmak için adrese gidiyoruz.
 https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.tangle.tools&ref=blog.webb.tools#/staking/actions
 
 ![image](https://github.com/molla202/Tangle-Network/assets/91562185/93fad2ef-5d27-40d3-9701-b8d7f1c8ee2b)
 
-* validate diyoruz cüzdanımızı seçiyoruz. 1 adet deyip devam ediyoruz.
+* validate diyoruz cüzdanımızı seçiyoruz. `1` adet deyip devam ediyoruz.
 
 ![image](https://github.com/molla202/Tangle-Network/assets/91562185/674b3116-4d04-4537-a101-18bc432d6825)
 
 ![image](https://github.com/molla202/Tangle-Network/assets/91562185/26e31fed-2ac9-43b0-b487-f9b2fd951339)
 
-* gelen ekranda sezon keyi girmemiz lazım almak için eşleşmesi bitmiş nodemuzda şu kodu giriyoruz
+* gelen ekranda `sezon keyi` girmemiz lazım almak için eşleşmesi bitmiş nodemuzda şu kodu giriyoruz
 ```
 curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "author_rotateKeys", "params":[]}' http://localhost:9933
 ```
@@ -94,8 +94,9 @@ curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method":
 
 * yedek almayı unutmayınız. aşağıdaki yerdeki dosyaları yedekleyiniz taşımakta laızm olucak taşımak için normal kurun eşleşin sonra durdurup key dosyalarını değiştirip başlatın
 
-$HOME/.tangle/node-key
-$HOME/.tangle/data/chains/tangle-standalone-testnet/keystore/
+`$HOME/.tangle/node-key`
+
+`$HOME/.tangle/data/chains/tangle-standalone-testnet/keystore/`
 
 
 ### Nodu silmek
