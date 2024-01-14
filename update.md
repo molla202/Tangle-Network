@@ -2,8 +2,23 @@
 
 ![image](https://github.com/molla202/Tangle-Network/assets/91562185/65a58a93-a5a4-4507-b789-7adeee085311)
 
-FORM : https://docs.google.com/forms/d/e/1FAIpQLSc7pLiwetgx3DUkt6waXn8Kung9QzY5DT9Y_b5xnU1rtsYO7Q/viewform
+### Discord : https://discord.gg/n5fx5xpt
 ## NOT: ubuntu 22
+
+## Sistem Gereksinimleri istenilen
+| Bileşenler | Minimum Gereksinimler | 
+| ------------ | ------------ |
+| CPU |	4|
+| RAM	| 8+ GB |
+| Storage	| 200 GB SSD |
+
+## Sistem Gereksinimleri minimum
+| Bileşenler | Minimum Gereksinimler | 
+| ------------ | ------------ |
+| CPU |	2|
+| RAM	| 4+ GB |
+| Storage	| 200 GB SSD |
+
 ### Update
 ```
 apt update && apt upgrade -y
@@ -21,7 +36,6 @@ wget -O tangle https://github.com/webb-tools/tangle/releases/download/v0.6.1/tan
 sudo mv tangle /usr/bin/
 tangle --version
 ```
-
 
 
 ### Servis oluşturuyoruz
@@ -68,33 +82,41 @@ journalctl -u tangle -f -o cat
 ```
 ### Panel işlemleri
 * herhangi bir polka cüzdanı işimizi görecektir.
-https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.tangle.tools&ref=blog.webb.tools#/accounts
+
+https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Ftestnet-rpc.tangle.tools#/accounts
+
 * adrese gidiyoruz ve cüzdan adresimizi kopyalıyoruz
-* faucetten `testcoini` talep edıyoruz https://faucet.tangle.tools/ twit bağlama gbi öncelikler var aynı amanda takip.  ağdan tangleyi seçiyoruz. 2 tip talep yontemi var biri pola diğeri mm adresi
+* faucetten `testcoini` talep edıyoruz discord faucet kanalı 10 dane verıor 9 dane ile validator oluyoruz..
 * daha sonra validator olmak için adrese gidiyoruz.
-https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.tangle.tools&ref=blog.webb.tools#/staking/actions
 
-![image](https://github.com/molla202/Tangle-Network/assets/91562185/93fad2ef-5d27-40d3-9701-b8d7f1c8ee2b)
+https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Ftestnet-rpc.tangle.tools#/staking/actions
 
-* validate diyoruz cüzdanımızı seçiyoruz. `1` adet deyip devam ediyoruz.
+![image](https://github.com/Core-Node-Team/Testnet-TR/assets/91562185/f7d61eb9-3484-442c-8031-450b5b8eed8c)
 
-![image](https://github.com/molla202/Tangle-Network/assets/91562185/674b3116-4d04-4537-a101-18bc432d6825)
 
-![image](https://github.com/molla202/Tangle-Network/assets/91562185/26e31fed-2ac9-43b0-b487-f9b2fd951339)
+* validate diyoruz cüzdanımızı seçiyoruz. `9` adet deyip devam ediyoruz.
+
+![image](https://github.com/Core-Node-Team/Testnet-TR/assets/91562185/4a284c8a-96de-4ea1-ae75-33c8c681c010)
+
 
 * gelen ekranda `sezon keyi` girmemiz lazım almak için eşleşmesi bitmiş nodemuzda şu kodu giriyoruz
+
 ```
 curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "author_rotateKeys", "params":[]}' http://localhost:9933
 ```
 
-* daha sonrası normal şeyler zaten beklemede gorunucez https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.tangle.tools&ref=blog.webb.tools#/staking bu rda belirli dönemde onaylandıktan sonra aktive geçicez suan validator limiti 20 yukseltilicektir.
+![image](https://github.com/Core-Node-Team/Testnet-TR/assets/91562185/7b31c8d0-22e7-4b7b-859d-f041a20f3053)
 
-* yedek almayı unutmayınız. aşağıdaki yerdeki dosyaları yedekleyiniz taşımakta laızm olucak taşımak için normal kurun eşleşin sonra durdurup key dosyalarını değiştirip başlatın
 
-`$HOME/.tangle/node-key`
+* daha sonrası normal şeyler zaten beklemede gorunucez 
 
-`$HOME/.tangle/data/chains/tangle-standalone-testnet/keystore/`
+https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Ftestnet-rpc.tangle.tools#/staking
 
+burda belirli dönemde onaylandıktan sonra aktive geçicez .
+
+* Lider toplasında puanlar zamanla yansıyacak
+
+https://leaderboard.tangle.tools/
 
 ### Nodu silmek
 ```
@@ -105,5 +127,3 @@ systemctl daemon-reload && \
 cd \
 rm -r .tangle
 ```
-
-
